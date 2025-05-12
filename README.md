@@ -1,2 +1,2 @@
-# Logica-de-programa-o
+# Logica-de-programao
 é isso ai
