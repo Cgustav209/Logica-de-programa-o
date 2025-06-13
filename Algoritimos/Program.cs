@@ -1,144 +1,80 @@
-﻿using System.Drawing;
-using System.Runtime.CompilerServices;
-using System.Security.AccessControl;
-
-namespace Projeto_calsses
+﻿namespace Membros_estaticos
 {
     internal class Program
     {
         static void Main(string[] args)
         {
 
+            Console.WriteLine();
+            int opcao;
+            do
+            {
 
-            LaçosRepetições Repiticao = new LaçosRepetições();
-            Repiticao.Repeticao();
+                Console.WriteLine("Selecione qual operação você quer fazer:");
+                Console.WriteLine("1 - multiplicação");
+                Console.WriteLine("2 - divisão");
+                Console.WriteLine("3 - adição");
+                Console.WriteLine("4 - Subtração");
+                Console.WriteLine();
 
-            Menu segundoExercicio = new Menu();
-            segundoExercicio.menu();
+                opcao = Convert.ToInt32(Console.ReadLine());
 
-            Imprimir imprimir = new Imprimir();
-            imprimir.sequecia();
+                Console.Clear();
 
-            Tabuada tabuadaEscolhida = new Tabuada();
-            tabuadaEscolhida.tabuada();
-
-            Jogo DeAzar = new Jogo();
-            DeAzar.jogo();
-
-
-            //ContaBancaria contaBancaria = new ContaBancaria();
-            //{
-
-            //    Console.WriteLine("Quanto você tem na conta:");
-            //    double Saldo = Convert.ToDouble(Console.ReadLine());
-            //    Console.Clear();
-
-            //    Console.WriteLine("Deposite um valor");
-            //    double Valor = Convert.ToDouble(Console.ReadLine());
+                switch (opcao)
+                {
+                    case 1:
+                        Console.WriteLine("Digite o primeiro numero: ");
+                        double Valor1 = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Digite o segundo numero: ");
+                        double Valor2 = Convert.ToDouble(Console.ReadLine());
 
 
-            //    contaBancaria.Depositar(Saldo, Valor);
-            //    contaBancaria.CosultarSaldo(Saldo);
+                        Console.WriteLine($"Resultado:{MatematicaUtil.Multiplicar(Valor1, Valor2)}");
+                        break;
 
-            //}
+                    case 2:
+                        do
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Digite o primeiro numero: ");
+                            Valor1 = Convert.ToDouble(Console.ReadLine());
+                            Console.WriteLine("Digite o segundo numero: ");
+                            Valor2 = Convert.ToDouble(Console.ReadLine());
 
-
-
-
-
-            //Retangulo retangulo = new Retangulo();
-            //{
-            //    Console.WriteLine("Digite a base do retangulo");
-            //    double Base = Convert.ToDouble(Console.ReadLine());
-            //    Console.Clear();
-
-            //    Console.WriteLine("Digite a altura do retangulo");
-            //    double Altura = Convert.ToDouble(Console.ReadLine());
-            //    Console.Clear();
-
-            //    retangulo.CalcularArea(Base, Altura);
-
-            //    retangulo.CalcularPerimetro(Base, Altura);
+                        } while (Valor2 == 0);
 
 
-            //
+                        Console.WriteLine($"Resultado:{MatematicaUtil.Dividir(Valor1, Valor2)}");
+                        break;
+
+                    case 3:
+                        Console.WriteLine("Digite o primeiro numero: ");
+                        Valor1 = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Digite o segundo numero: ");
+                        Valor2 = Convert.ToDouble(Console.ReadLine());
 
 
+                        Console.WriteLine($"Resultado:{MatematicaUtil.Somar(Valor1, Valor2)}");
+
+                        break;
+
+                    case 4:
+                        Console.WriteLine("Digite o primeiro numero: ");
+                        Valor1 = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Digite o segundo numero: ");
+                        Valor2 = Convert.ToDouble(Console.ReadLine());
 
 
+                        Console.WriteLine($"Resultado:{MatematicaUtil.Subtrair(Valor1, Valor2)}");
 
-            //Aluno primeiroAluno = new Aluno();
-            //Aluno segundoAluno = new Aluno();
+                        break;
 
-            //Console.WriteLine("Digite o nome do Aluno:");
-            //primeiroAluno.Nome = Console.ReadLine();
-            //Console.Clear();
+                }
 
-            //Console.WriteLine("Qual sua Turma:");
-            //primeiroAluno.Turma = Console.ReadLine();
-            //Console.Clear();
-
-            //Console.WriteLine("Qual sua idade:");
-            //primeiroAluno.Idade = Console.ReadLine();
-            //Console.Clear();
-
-
-
-            //Console.WriteLine("Digite o nome do outro Aluno:");
-            //segundoAluno.Nome = Console.ReadLine();
-            //Console.Clear();
-
-            //Console.WriteLine("Qual sua Turma:");
-            //segundoAluno.Turma = Console.ReadLine();
-            //Console.Clear();
-
-            //Console.WriteLine("Qual sua idade:");
-            //segundoAluno.Idade = Console.ReadLine();
-            //Console.Clear();
-
-            //primeiroAluno.MostrarDetalhes();
-            //segundoAluno.MostrarDetalhes();
-            //Console.Clear();
-
-
-
-
-            //Livro livroItalo = new Livro();
-            //Livro livroWagner = new Livro();
-
-            //Console.WriteLine("Digite seu livro");
-            //livroItalo.Titulo = Console.ReadLine();
-            //Console.Clear();
-
-            //Console.WriteLine("Qual o autor? ");
-            //livroItalo.Autor = Console.ReadLine();
-            //Console.Clear();
-
-            //Console.WriteLine("Qual é o genero desse livro");
-            //livroItalo.Genero = Console.ReadLine();
-            //Console.Clear();
-
-
-
-
-
-            //Console.WriteLine("Digite seu livro");
-            //livroWagner.Titulo = Console.ReadLine();
-            //Console.Clear();
-
-            //Console.WriteLine("Qual o autor? ");
-            //livroItalo.Autor = Console.ReadLine();
-            //Console.Clear();
-
-            //Console.WriteLine("Qual é o genero desse livro");
-            //livroItalo.Genero = Console.ReadLine();
-            //Console.Clear();
-
-            //livroItalo.MostrarDetalhes();
-            //livroWagner.MostrarDetalhes();
-
-
-
+            } while (opcao >= 5);
         }
     }
 }
+
+
