@@ -1,2 +1,2 @@
 # Logica-de-programao
-é isso ai
+C# e Portugol, passos iniciais
